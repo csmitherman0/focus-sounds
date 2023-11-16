@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "FocusSounds",
+    "description": "Sounds for focus and relaxation",
+    "version": "1.0.0",
+    "author": "Christian Smitherman",
+    "action": {
+        "default_popup": "popup/popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "tabs",
+        "storage"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/sounds/*.mp3"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
